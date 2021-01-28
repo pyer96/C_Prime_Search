@@ -5,14 +5,14 @@
  *	workers (threads) T.
  *
  *	Usage:
- *		<./solution09> <N> <T>
+ *		<./prime> <N> <T>
  *
  *	Notes:
  *		-DEBUG macro flag available in order to check ranges assigned to workers
  *
  *
  *	Compile:
- *		gcc solution09.c -o solution09 -Wall -Werror -pthread -lm -fsanitize=leak
+ *		gcc prime.c -o prime -Wall -Werror -pthread -lm -fsanitize=leak
  *	
  * ###########################################################################################
  */
@@ -105,7 +105,7 @@ void *find_prime(void *arg) {
 
 int main(int argc, char **argv) {
   if (argc != 3) {
-    dprintf(2, "Wrong Usage: <./solution09> <N> <T>\n");
+    dprintf(2, "Wrong Usage: <./prime> <N> <T>\n");
     exit(EXIT_FAILURE);
   }
   int N, T;
